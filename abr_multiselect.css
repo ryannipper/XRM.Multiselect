@@ -57,9 +57,14 @@ font-size: 110%;
     border-bottom: 3px solid darkorange;
 }
 
-
-.true {
+.disabled {
 background-color: lightcoral;
 pointer-events: none;
 }
 
+.secured {
+background-color: white;
+pointer-events: none;
+border: 2px solid red;
+color: red;
+}
