@@ -1,11 +1,95 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <meta charset="utf-8" />
     <title>Xrm.Multiselect</title>
-    <link href="../Webresources/abr_multiselect.css" rel="stylesheet" />
 </head>
 <body>
+<style>
+    body {
+    margin: 0px;
+    font-size: 10px;
+}
+
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    border: none;
+    margin: 1px;
+    word-wrap: break-word;
+    width: 120px;
+    height: 60px;
+    float: left;   
+    margin: 3px;
+}
+
+button:hover {
+	background-color: white;
+	color: lightgray;
+	border: 2px solid lightgray;
+}
+
+
+.clicked {
+    background-color: #3fa6cc;
+    color: white;
+}
+
+.clicked:hover {
+    background-color: white;
+    color: #3fa6cc;
+	border: 2px solid #3fa6cc;
+}
+
+.unclicked {
+    background-color: lightgray;
+    color: black;
+}
+
+.required {
+    font-weight: bold;
+    font-size: 120%;
+    border-bottom: 3px solid red;
+}
+
+.required:hover {
+    border-bottom: 3px solid red;
+}
+
+.recommended {
+    font-weight: bold;
+font-size: 110%;
+    border-bottom: 3px solid darkorange;
+}
+
+.recommended:hover {
+    border-bottom: 3px solid darkorange;
+}
+
+.disabled {
+background-color: lightcoral;
+pointer-events: none;
+}
+
+.disabled:before {
+    content: "\f023  ";
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 600;
+}
+
+.secured {
+background-color: white;
+pointer-events: none;
+border: 2px solid red;
+color: red;
+}
+
+.secured:before {
+    content: "\f084  ";
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 600;
+}
+</style>
     <div class="main">
         <!-- ko foreach: myButtons -->
         <!-- ko if: isRequired --><div style="display:block"></div><!-- /ko -->
